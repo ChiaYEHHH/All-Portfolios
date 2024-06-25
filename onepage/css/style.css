@@ -1,0 +1,21 @@
+body{
+    background-color: cadetblue;
+}
+
+.container1,
+.container2{
+    height: 50vh;
+}
+.navbar-brand>img{
+    width: 200px;
+    /* height: 30px; */
+}
+.tabs{
+    flex-direction: row;
+}
+.movie_text{
+font-size: 25px;
+}
+.list{
+    font-size: 25px;
+}

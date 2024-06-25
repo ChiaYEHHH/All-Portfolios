@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>一頁式</title>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./images/Tom_and_Jerry_logo.svg.png" alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <!-- carouse -->
+    <div id="carouselExampleIndicators" class="carousel slide ">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/carousel1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/carousel2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/carousel3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- carouse end -->
+    <!-- container1 腳色 -->
+    <div class="container-fluid container1 bg-danger mt-5">
+        <div class="row justify-content-start">
+            <!-- 左側 -->
+            <div class="col-3">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#Cat">Cat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#Mou">Mou</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content mt-2">
+                    <!-- 貓列表 -->
+                    <div class="tab-pane container active bg-primary btn_Cat" id="Cat">
+                        <div class="list">
+                            <img src="./images/tom.png" style="height: 100px;" alt="" srcset="">
+                            湯姆
+                        </div>
+                        <div class="list">
+                            <img src="./images/buchi.png" style="height: 100px;" alt="" srcset="">
+                            布奇
+                        </div>
+                        <div class="list">
+                            <img src="./images/lightning.png" style="height: 100px;" alt="" srcset="">
+                            萊特寧
+                        </div>
+                        <div class="list">
+                            <img src="./images/topsy.png" style="height: 100px;" alt="" srcset="">
+                            托普斯
+                        </div>
+                    </div>
+                    <!-- 鼠列表 -->
+                    <div class="tab-pane container btn_Mou" id="Mou">
+                        <div class="list">
+                            <img src="./images/jerry.png" style="height: 100px;" alt="" srcset="">
+                            傑瑞
+                        </div>
+                        <div class="list">
+                            <img src="./images/tuffy.png" style="height: 100px;" alt="" srcset="">
+                            泰菲
+                        </div>
+                        <div class="list">
+                            <img src="./images/jerrysbro1.png" style="height: 100px;" alt="" srcset="">
+                            大表哥
+                        </div>
+                        <div class="list">
+                            <img src="./images/jerrysbro2.png" style="height: 100px;" alt="" srcset="">
+                            二表哥
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 右側 -->
+            <div class="col-5">
+                <div class="box_Cat pt-5">
+                    <div class="cat_Img">
+                        <img src="./images/tom.png" style="height: 100px;" alt="" srcset="">
+                    </div>
+                    <div class="cat_Img">
+                        <img src="./images/buchi.png" style="height: 100px;" alt="" srcset="">
+                    </div>
+                    <div class="cat_Img">
+                        <img src="./images/lightning.png" style="height: 100px;" alt="" srcset="">
+                    </div>
+                    <div class="cat_Img">
+                        <img src="./images/topsy.png" style="height: 100px;" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="box_Mou  pt-5">
+                    <div class="mou_Img">
+                        <img src="./images/jerry.png" style="height: 100px;" alt="" srcset="">
+                    </div>
+                    <div class="mou_Img">
+                        <img src="./images/tuffy.png" style="height: 100px;" alt="" srcset="">
+                    </div>
+                    <div class="mou_Img">
+                        <img src="./images/jerrysbro1.png" style="height: 100px;" alt="" srcset="">
+                    </div>
+                    <div class="mou_Img">
+                        <img src="./images/jerrysbro2.png" style="height: 100px;" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container1 end -->
+    <!-- container2 電影 -->
+    <div class="container-fluid container2 bg-info p-5">
+        <div class="row h-100 justify-content-end">
+            <div class="col-4 movie movie_text pt-5">
+                《湯姆貓與傑利鼠》（英語：Tom &
+                Jerry）是一部於2021年上映的美國真人動畫喜劇電影。電影改編自約瑟·巴貝拉和威廉·漢納的同名動畫短片，由提姆·史多利執導，克雷格·萊特、凱蒂·西爾博曼、艾普爾·普羅瑟和凱文·卡斯提洛共同撰寫劇本。其主演包括克蘿伊·摩蕾茲、麥可·潘納、鄭肯和羅伯·德萊尼。
+            </div>
+            <div class="col-5 movie movie_Iframe">
+                <iframe class="w-100 h-100" src="https://www.youtube.com/embed/GM0wvut_N6E?si=btuZFnMy0xdlKftC"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- container2 end -->
+    <!-- container3 -->
+    <div class="container-fluid container3 pt-5">
+        <div class="row">
+            <table class="col table text-center">
+                <thead class="table table-info">
+                    <th>精神狀態</th>
+                    <th>上課</th>
+                    <th>老師問問題</th>
+                    <th>要交作業</th>
+                </thead>
+                <tbody>
+                    <!-- before -->
+                    <tr>
+                        <td>Before</td>
+                        <td>
+                            <img src="./images/haha5.jpg" height="250px" alt="" srcset="">
+                        </td>
+                        <td>
+                            <img src="./images/tom.gif" height="250px" alt="" srcset="">
+                        </td>
+                        <td>
+                            <img src="./images/hahaha.jpeg" height="250px" alt="" srcset="">
+                        </td>
+                    </tr>
+                    <!-- after -->
+                    <tr>
+                        <td>After</td>
+                        <td>
+                            <img src="./images/haha4.jpg" height="250px" alt="" srcset="">
+                        </td>
+                        <td>
+                            <img src="./images/haha2.jpg" height="250px" alt="" srcset="">
+                        </td>
+                        <td>
+                            <img src="./images/haha7.jpg" height="250px" alt="" srcset="">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- container3 end -->
+    <!-- footer -->
+    <div class="container-fluid mt-5 mb-5">
+        <div class="row">
+            <div class="col text-center">
+                Copyright © Google Inc. All rights reserved.
+            </div>
+        </div>
+    </div>
+    <!-- footer end-->
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+
+        const tab_Cat = $('.btn_Cat');
+        const tab_Mou = $('.btn_Mou');
+        const box_Cat = $('.box_Cat');
+        const box_Mou = $('.box_Mou');
+        const list = $('.list');
+
+
+        // console.log('okok',tab_Cat);
+        // console.log('okok',tab_Mou);
+        // console.log('okok',list_Mou);
+        // console.log('okok',list_Mou);
+
+        box_Cat.show();
+        box_Mou.hide();
+
+        tab_Cat.click(function (e) {
+            box_Cat.show();
+            box_Mou.hide();
+        })
+        tab_Mou.click(function (e) {
+            box_Mou.show();
+            box_Cat.hide();
+        })
+        list.click(function () {
+            $(this)
+        })
+    })
+</script>
