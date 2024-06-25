@@ -13,7 +13,7 @@
 
 <body>
     <!-- nav -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="./images/Tom_and_Jerry_logo.svg.png" alt="" srcset="">
@@ -25,8 +25,10 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#container1">Character</a>
+                    <a class="nav-link" href="#container2">Tom and Jerry</a>
+                    <a class="nav-link" href="#container3">Movie</a>
+                    <a class="nav-link" href="#container4">Mental State</a>
                 </div>
             </div>
         </div>
@@ -65,11 +67,23 @@
         </button>
     </div>
     <!-- carouse end -->
-    <!-- container1 腳色 -->
-    <div class="container-fluid container1 bg-danger mt-5">
-        <div class="row justify-content-start">
+    <!-- container1 tom&jerry -->
+    <div class="container-fluid container1 mt-4" id="container1">
+        <div class="row h-100 w-100">
+            <div class="col-lg-6 col-sm-12 pic_Hover" id="T&J1">
+                <img height="100%" width="100%" src="./images/bg1.jpg" alt="" srcset="">
+            </div>
+            <div class="col-lg-6 col-sm-12 mt-4 pic_Hover" id="bg3">
+                <img height="100%" width="100%" src="./images/bg5.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <!-- container1 end -->
+    <!-- container2 角色 -->
+    <div class="container-fluid container2 mt-3" id="container2">
+        <div class="row h-100 justify-content-start">
             <!-- 左側 -->
-            <div class="col-3">
+            <div class="col-lg-4 col-sm-12 pt-3 ps-5">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-bs-toggle="tab" href="#Cat">Cat</a>
@@ -82,88 +96,90 @@
                 <!-- Tab panes -->
                 <div class="tab-content mt-2">
                     <!-- 貓列表 -->
-                    <div class="tab-pane container active bg-primary btn_Cat" id="Cat">
-                        <div class="list">
+                    <div class="tab-pane container active btn_Cat" id="Cat">
+                        <div class="list" id="cat1">
                             <img src="./images/tom.png" style="height: 100px;" alt="" srcset="">
                             湯姆
                         </div>
-                        <div class="list">
+                        <div class="list" id="cat2">
                             <img src="./images/buchi.png" style="height: 100px;" alt="" srcset="">
                             布奇
                         </div>
-                        <div class="list">
+                        <div class="list" id="cat3">
                             <img src="./images/lightning.png" style="height: 100px;" alt="" srcset="">
                             萊特寧
                         </div>
-                        <div class="list">
+                        <div class="list" id="cat4">
                             <img src="./images/topsy.png" style="height: 100px;" alt="" srcset="">
                             托普斯
                         </div>
                     </div>
                     <!-- 鼠列表 -->
                     <div class="tab-pane container btn_Mou" id="Mou">
-                        <div class="list">
+                        <div class="list" id="mou1">
                             <img src="./images/jerry.png" style="height: 100px;" alt="" srcset="">
                             傑瑞
                         </div>
-                        <div class="list">
+                        <div class="list" id="mou2">
                             <img src="./images/tuffy.png" style="height: 100px;" alt="" srcset="">
                             泰菲
                         </div>
-                        <div class="list">
+                        <div class="list" id="mou3">
                             <img src="./images/jerrysbro1.png" style="height: 100px;" alt="" srcset="">
                             大表哥
                         </div>
-                        <div class="list">
+                        <div class="list" id="mou4">
                             <img src="./images/jerrysbro2.png" style="height: 100px;" alt="" srcset="">
                             二表哥
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- 右側 -->
-            <div class="col-5">
-                <div class="box_Cat pt-5">
-                    <div class="cat_Img">
-                        <img src="./images/tom.png" style="height: 100px;" alt="" srcset="">
+            <div class="col-lg-6 col-sm-12  align-content-center text-center">
+                <div class="box h-100 pt-5">
+                    <img height="100%" width="100%" src="./images/T&J2.gif" alt="" srcset="">
+                </div>
+                <div class="box_Cat pt-5 h-100">
+                    <div class="cat_Img cat1 h-100">
+                        <img height="100%" width="100%" src="./images/tom3.gif" alt="" srcset="">
                     </div>
-                    <div class="cat_Img">
-                        <img src="./images/buchi.png" style="height: 100px;" alt="" srcset="">
+                    <div class="cat_Img cat2 h-100">
+                        <img height="100%" width="100%" src="./images/buchi1.gif" alt="" srcset="">
                     </div>
-                    <div class="cat_Img">
-                        <img src="./images/lightning.png" style="height: 100px;" alt="" srcset="">
+                    <div class="cat_Img cat3 h-100">
+                        <img height="100%" width="100%" src="./images/tbro1.gif" alt="" srcset="">
                     </div>
-                    <div class="cat_Img">
-                        <img src="./images/topsy.png" style="height: 100px;" alt="" srcset="">
+                    <div class="cat_Img cat4 h-100">
+                        <img height="100%" width="100%" src="./images/tom4.gif" alt="" srcset="">
                     </div>
                 </div>
-                <div class="box_Mou  pt-5">
-                    <div class="mou_Img">
-                        <img src="./images/jerry.png" style="height: 100px;" alt="" srcset="">
+                <div class="box_Mou pt-5 h-100">
+                    <div class="mou_Img mou1 h-100" id="mou1">
+                        <img height="100%" width="100%" src="./images/jerry1.gif" alt="" srcset="">
                     </div>
-                    <div class="mou_Img">
-                        <img src="./images/tuffy.png" style="height: 100px;" alt="" srcset="">
+                    <div class="mou_Img mou2 h-100" id="mou2">
+                        <img height="100%" width="100%" src="./images/tiny2.gif" alt="" srcset="">
                     </div>
-                    <div class="mou_Img">
-                        <img src="./images/jerrysbro1.png" style="height: 100px;" alt="" srcset="">
+                    <div class="mou_Img mou3 h-100" id="mou3">
+                        <img height="100%" width="100%" src="./images/jbro1.gif" alt="" srcset="">
                     </div>
-                    <div class="mou_Img">
-                        <img src="./images/jerrysbro2.png" style="height: 100px;" alt="" srcset="">
+                    <div class="mou_Img mou4 h-100" id="mou4">
+                        <img height="100%" width="100%" src="./images/jbro2.gif" alt="" srcset="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- container1 end -->
-    <!-- container2 電影 -->
-    <div class="container-fluid container2 bg-info p-5">
+    <!-- container2 end -->
+    <!-- container3 電影 -->
+    <div class="container-fluid container3 mt-3" id="container3">
         <div class="row h-100 justify-content-end">
-            <div class="col-4 movie movie_text pt-5">
+            <div class="col-lg-4 col-sm-12 h-100 movie movie_text pt-5">
                 《湯姆貓與傑利鼠》（英語：Tom &
                 Jerry）是一部於2021年上映的美國真人動畫喜劇電影。電影改編自約瑟·巴貝拉和威廉·漢納的同名動畫短片，由提姆·史多利執導，克雷格·萊特、凱蒂·西爾博曼、艾普爾·普羅瑟和凱文·卡斯提洛共同撰寫劇本。其主演包括克蘿伊·摩蕾茲、麥可·潘納、鄭肯和羅伯·德萊尼。
             </div>
-            <div class="col-5 movie movie_Iframe">
+            <div class="col-lg-6 col-sm-12 movie movie_Iframe p-1">
                 <iframe class="w-100 h-100" src="https://www.youtube.com/embed/GM0wvut_N6E?si=btuZFnMy0xdlKftC"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -171,12 +187,12 @@
             </div>
         </div>
     </div>
-    <!-- container2 end -->
-    <!-- container3 -->
-    <div class="container-fluid container3 pt-5">
-        <div class="row">
-            <table class="col table text-center">
-                <thead class="table table-info">
+    <!-- container3 end -->
+    <!-- container4 table-->
+    <div class="container container4 mt-5" id="container4">
+        <div class="row h-100 w-100">
+            <table class="col-12 table h-100 w-100 text-center table-info bg-opacity-10">
+                <thead>
                     <th>精神狀態</th>
                     <th>上課</th>
                     <th>老師問問題</th>
@@ -184,7 +200,7 @@
                 </thead>
                 <tbody>
                     <!-- before -->
-                    <tr>
+                    <tr class="align-items-center">
                         <td>Before</td>
                         <td>
                             <img src="./images/haha5.jpg" height="250px" alt="" srcset="">
@@ -197,7 +213,7 @@
                         </td>
                     </tr>
                     <!-- after -->
-                    <tr>
+                    <tr class="align-items-center">
                         <td>After</td>
                         <td>
                             <img src="./images/haha4.jpg" height="250px" alt="" srcset="">
@@ -213,12 +229,12 @@
             </table>
         </div>
     </div>
-    <!-- container3 end -->
+    <!-- container4 end -->
     <!-- footer -->
-    <div class="container-fluid mt-5 mb-5">
+    <div class="container-fluid mt-5 mb-4">
         <div class="row">
             <div class="col text-center">
-                Copyright © Google Inc. All rights reserved.
+                Chia's Homework. Clap your hands TKS
             </div>
         </div>
     </div>
@@ -235,13 +251,12 @@
         const box_Mou = $('.box_Mou');
         const list = $('.list');
 
-
         // console.log('okok',tab_Cat);
         // console.log('okok',tab_Mou);
         // console.log('okok',list_Mou);
         // console.log('okok',list_Mou);
 
-        box_Cat.show();
+        box_Cat.hide();
         box_Mou.hide();
 
         tab_Cat.click(function (e) {
@@ -252,8 +267,30 @@
             box_Mou.show();
             box_Cat.hide();
         })
-        list.click(function () {
-            $(this)
-        })
+
+        $('.list').on('click', function () {
+            var id = $(this).attr('id'); // 獲取被點擊元素的 id
+            $('.mou_Img').hide(); // 隱藏所有 .mou_Img 元素
+            $('.box').hide();
+            $('.' + id).show(); // 顯示對應的 .mou_Img 元素
+        });
+        $('.list').on('click', function () {
+            var id = $(this).attr('id'); // 獲取被點擊元素的 id
+            $('.cat_Img').hide(); // 隱藏所有 .mou_Img 元素
+            $('.box').hide();
+            $('.' + id).show(); // 顯示對應的 .mou_Img 元素
+        });
+        $('.pic_Hover').hover(function () {
+            var id = $(this).attr('id'); // 獲取被懸停元素的 id
+            $(this).find('img').attr('src', './images/' + id + '.jpg'); // 更換圖片
+        }, function () {
+            var originalSrc;
+            if ($(this).attr('id') === 'T&J1') {
+                originalSrc = './images/bg1.jpg';
+            } else if ($(this).attr('id') === 'bg3') {
+                originalSrc = './images/bg5.jpg';
+            }
+            $(this).find('img').attr('src', originalSrc); // 恢復原始圖片
+        });
     })
 </script>
