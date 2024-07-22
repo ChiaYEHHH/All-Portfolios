@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霍格華茲選課系統</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #elective_Courses {
+            font-size: 25px;
+            color: cornflowerblue;
+        }
+
+        #required_Courses {
+            font-size: 25px;
+            color: darkseagreen;
+        }
+
+        header {
+            font-size: 50px;
+            color: blue;
+            font-weight: bold;
+            text-align: center;
+            font-family: '標楷體';
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        霍格華茲選課系統
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="senior_Student.html" class="btn btn-secondary">風雲榜</a>
+                <a href="index.html" class="btn btn-secondary">登出</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="">
+            <div class="row mt-3">
+
+                <label class="input-group-text mb-3">學生資訊</label>
+                <!-- 輸入姓名 -->
+                <div class="col input-group">
+                    <span class="input-group-text">First and Last name</span>
+                    <input type="text" aria-label="First name" class="form-control">
+                    <input type="text" aria-label="Last name" class="form-control">
+                </div>
+                <div class="col input-group">
+                    <span class="input-group-text">Student ID</span>
+                    <input type="text" aria-label="Student ID" class="form-control">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <!-- 性別 -->
+                <div class="col">
+                    <select class="form-select form-select-mb " aria-label="Large select example">
+                        <option selected disabled>Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </div>
+
+                <!-- 種族 -->
+                <div class="col">
+                    <select class="form-select form-select-mb " aria-label="Large select example">
+                        <option selected disabled>Bloodline</option>
+                        <option value="1">Purebred</option>
+                        <option value="2">Half-Blood</option>
+                    </select>
+                </div>
+
+                <!-- 年齡 -->
+                <div class="col">
+                    <select class="form-select form-select-mb " aria-label="Large select example">
+                        <option selected disabled>Age</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 學院 -->
+            <div class="row mt-5">
+                <label class="input-group-text mb-3">學院</label>
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined"
+                        autocomplete="off" checked>
+                    <label class="btn btn-outline-danger" for="danger-outlined">葛來分多</label>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <input type="radio" class="btn-check" name="options-outlined" id="success-outlined"
+                        autocomplete="off">
+                    <label class="btn btn-outline-success" for="success-outlined">史萊哲林</label>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <input type="radio" class="btn-check" name="options-outlined" id="warning-outlined"
+                        autocomplete="off">
+                    <label class="btn btn-outline-warning" for="warning-outlined">赫夫帕夫</label>
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <input type="radio" class="btn-check" name="options-outlined" id="primary-outlined"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" for="primary-outlined">雷文克勞</label>
+                </div>
+
+
+
+
+
+                <!-- <div class="col-sm-12 col-md-6 col-lg-3 form-check">
+                <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                <label class="btn btn-danger" for="option1">葛來分多</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 form-check">
+                <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                <label class="btn btn-success" for="option2">史萊哲林</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 form-check">
+                <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                <label class="btn btn-warning" for="option3">赫夫帕夫</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 form-check">
+                <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                <label class="btn btn-primary" for="option4">雷文克勞</label>
+            </div> -->
+                <!-- <div class="col-sm-12 col-md-6 col-lg-3 form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    葛來分多
+                </label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    史萊哲林
+                </label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    赫夫帕夫
+                </label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    雷文克勞
+                </label>
+            </div> -->
+            </div>
+            <div class="row mt-5">
+                <!-- 必修 -->
+
+
+
+                <div class="col">
+                    <label class="input-group-text  mb-3">11301期-必修</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                        <label class="form-check-label" id="required_Courses" for="flexCheckDefault">
+                            符咒學
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1">
+                        <label class="form-check-label" id="required_Courses" for="flexCheckChecked1">
+                            魔藥學
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+                        <label class="form-check-label" id="required_Courses" for="flexCheckChecked2">
+                            變形學
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+                        <label class="form-check-label" id="required_Courses" for="flexCheckChecked3">
+                            天文學
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked4">
+                        <label class="form-check-label" id="required_Courses" for="flexCheckChecked4">
+                            魔法史
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked5">
+                        <label class="form-check-label" id="required_Courses" for="flexCheckChecked5">
+                            黑魔法防禦學
+                        </label>
+                    </div>
+                </div>
+                <!-- 選修 -->
+                <div class="col">
+                    <label class="input-group-text mb-3">11301期-選修</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckElective" checked>
+                        <label class="form-check-label" id="elective_Courses" for="flexCheckElective">
+                            飛行課
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckElective1">
+                        <label class="form-check-label" id="elective_Courses" for="flexCheckElective1">
+                            奇獸飼育學
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckElective2">
+                        <label class="form-check-label" id="elective_Courses" for="flexCheckElective2">
+                            占卜學
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckElective3">
+                        <label class="form-check-label" id="elective_Courses" for="flexCheckElective3">
+                            麻瓜研究
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckElective4">
+                        <label class="form-check-label" id="elective_Courses" for="flexCheckElective4">
+                            古代神秘文字研究
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckElective5">
+                        <label class="form-check-label" id="elective_Courses" for="flexCheckElective5">
+                            煉金術
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>

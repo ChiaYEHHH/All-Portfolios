@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            /* overflow:scroll; */
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(./pic/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+            /* 设置透明度，这里是 50% */
+            z-index: -1;
+            /* 确保它在内容的后面 */
+        }
+
+        /* 确保页面内容在背景图片的上层 */
+        body * {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: coral;
+            font-weight: bold;
+            font-family: '標楷體';
+        }
+
+        h3 {
+            color: darkblue;
+            font-weight: bold;
+            font-family: '標楷體';
+        }
+
+        p {
+            color: gray;
+            font-size: x-large;
+            font-family: '標楷體';
+        }
+        .bg01>.row{
+            display: flex;
+            margin: auto;
+            width: 100%;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="container text-center mt-3">
+        <h1 >與鳳行主題曲</h1>
+    </div>
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col-sm-6 col-lg-3 ">
+                <button class="btn btn-success btn-lg songBtn" type="button" id="songBtn1">碧蒼</button>
+            </div>
+            <div class="col-sm-6 col-lg-3 ">
+                <button class="btn btn-info btn-lg songBtn" type="button" id="songBtn2">如初</button>
+            </div>
+            <div class="col-sm-6 col-lg-3 ">
+                <button class="btn btn-warning btn-lg songBtn" type="button" id="songBtn3">熾心</button>
+            </div>
+            <div class="col-sm-6 col-lg-3 ">
+                <button class="btn btn-danger btn-lg songBtn" type="button" id="songBtn4">不知返</button>
+            </div>
+        </div>
+    </div>
+    <div class="bg01 container mt-5" id="bg01">
+        <div class="row text-center">
+            <div class="col w-100">
+                <img class="img-fluid" src="./pic/bg01.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="song1 container  mt-5" id="song1">
+        <div class="row w-100">
+            <div class="col-sm-12 col-lg-5 mt-5">
+                <img class="w-100" src="./pic/song1.jpg" alt="">
+            </div>
+            <div class="col-sm-12 col-lg-7 text-center mt-4">
+                <div>
+                    <h3>李佳薇-碧蒼</h3>
+                </div>
+                <!-- 歌詞 -->
+                <div>
+                    <p>
+                        看過生命的河 不息地流淌<br>
+                        掙脫束縛的殼 追尋著希望<br>
+                        無意嶄露鋒芒 本能地迎難向上<br>
+                        一道光照亮 天呼嘯 地震蕩<br>
+                        是我揮舞的銀槍<br>
+                        Whoo-whoo-whoo-whoo<br>
+                        Whoo-whoo-whoo-whoo-whoo<br>
+                        衝破迷霧千萬丈 戰鼓聲四方<br>
+                        勇敢者的較量<br>
+                        浴火灼熱的胸膛<br>
+                        傾盡生命要決心抵抗<br>
+                        絕境讓我肆意生長 觸底的力量<br>
+                        高喊心中信仰<br>
+                        看那一抹燦陽 生之嚮往<br>
+                        望向刺目的荒 沉默著反抗<br>
+                        聽大地的心臟 在夢中迴響<br>
+                        把信念織成網 揮灑了山河萬丈<br>
+                        前路多漫長 多激盪 不徬徨<br>
+                        未來終在我肩上<br>
+                        Whoo-whoo-whoo-whoo<br>
+                        Whoo-whoo-whoo-whoo-whoo<br>
+                        擊潰風沙千萬揚 鮮血染紅裝<br>
+                        馳騁天地穹蒼<br>
+                        全力以赴的戰場<br>
+                        每次碰撞迸發的火光<br>
+                        即使逆著光也酣暢<br>
+                        炙熱的守望 定能融化風霜<br>
+                        看日出的方向 滿是晴朗<br>
+                        絕境讓我肆意生長 觸底的力量<br>
+                        高喊心中信仰<br>
+                        看那一抹燦陽 生之嚮往<br>
+                        生之嚮往 生之嚮往<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container song2 mt-5" id="song2">
+        <div class="row w-100">
+            <div class="col-sm-12 col-lg-5 mt-5">
+                <img class="w-100" src="./pic/song2.jpg" alt="">
+            </div>
+            <div class="col-sm-12 col-lg-7 text-center mt-4">
+                <div>
+                    <h3>張碧晨-如初</h3>
+                </div>
+                <div>
+                    <p>
+                        雪籟天地 便一散成荒<br>
+                        懸光入畫 映一城的希望<br>
+                        厲銀槍的鋒芒 懾四方的喧嘩<br>
+                        是與非似莫似幻<br>
+                        <br>
+                        情落紅塵 便一念成妄<br>
+                        再多纏綿 注一身子然<br>
+                        浮生夢華 與你把酒相忘<br>
+                        <br>
+                        敬愛恨 銘刻入骨的烈<br>
+                        不負這一趟 世間的緣<br>
+                        完整了心的空缺 再各赴誓約<br>
+                        <br>
+                        敬宿命 桎梏餘生的劫<br>
+                        斷痴戀 塑凜冽的界限<br>
+                        星辰瀲灩 山河共鑑 如初言<br>
+                        <br>
+                        雪簌天地 便一散成荒<br>
+                        懸光入畫 映一城的希望<br>
+                        厲銀槍的鋒芒 懾四方的喧嘩<br>
+                        是與非似莫似幻<br>
+                        <br>
+                        情落紅塵 便一念成妄<br>
+                        再多纏綿 註一身子然<br>
+                        浮生夢華 與你把酒相忘<br>
+                        <br>
+                        敬愛恨 銘刻入骨的烈<br>
+                        不負這一趟 世間的緣<br>
+                        完整了心的空缺 再各赴誓約<br>
+                        <br>
+                        敬宿命 桎梏餘生的劫<br>
+                        斷痴戀 塑凜冽的界線<br>
+                        星辰瀲灩 山河共鑑 如初言<br>
+                        <br>
+                        捍日月<br>
+                        傾盡一切 為浩蕩夙願<br>
+                        意難全 唯護萬物不滅<br>
+                        <br>
+                        敬愛恨 銘刻入骨的烈<br>
+                        不負這一趟 世間的緣<br>
+                        完整了心的空缺 再各赴誓約<br>
+                        <br>
+                        敬宿命 桎梏餘生的劫<br>
+                        斷痴戀 塑凜冽的界限<br>
+                        星辰瀲灩 山河共鑑 如初言<br>
+                        星辰瀲灩 山河共鑑 如初言<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container song3 mt-5" id="song3">
+        <div class="row w-100">
+            <div class="col-sm-12 col-lg-5 mt-5">
+                <img class="w-100" src="./pic/song3.jpg" alt="">
+            </div>
+            <div class="col-sm-12 col-lg-7 text-center mt-4">
+                <div>
+                    <h3>希林娜依.高-熾心</h3>
+                </div>
+                <div>
+                    <p>
+                        掠過了蒼茫<br>
+                        直視了隕殤<br>
+                        崎嶇 鳳鳴長嘯 眼眸越明亮<br>
+                        澄碧染蒼霜<br>
+                        沙風烈 不過尋常<br>
+                        唯 悸動光景 難抵抗<br>
+                        用我熾熱 引一束光<br>
+                        點燃 世間的虛妄<br>
+                        心的花火 絢爛幾場<br>
+                        才算不枉<br>
+                        驀然回望 剎那激盪<br>
+                        血 也滾燙<br>
+                        熾燃 心的目光<br>
+                        掠過了蒼茫<br>
+                        直視了隕殤<br>
+                        崎嶇 鳳鳴長嘯 眼眸越明亮<br>
+                        澄碧染蒼霜<br>
+                        沙風烈 不過尋常<br>
+                        唯 悸動光景 難抵抗<br>
+                        用我熾熱 引一束光<br>
+                        點燃 世間的虛妄<br>
+                        心的花火 絢爛的狂<br>
+                        落也不枉<br>
+                        回頭凝望 剎那激盪<br>
+                        血 也滾燙<br>
+                        熾燃 心的目光<br>
+                        燃動蒼茫 世間的光<br>
+                        全都 因你而點亮<br>
+                        心的鋒芒 穿破愚妄<br>
+                        燒盡心牆<br>
+                        鳳行世上 無畏天光<br>
+                        赤誠 多滾燙<br>
+                        熾然 兩心守望<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container song4 mt-5" id="song4">
+        <div class="row w-100">
+            <div class="col-sm-12 col-lg-5 mt-5">
+                <img class="w-100" src="./pic/song4.jpg" alt="">
+            </div>
+            <div class="col-sm-12 col-lg-7 text-center mt-4">
+                <div>
+                    <h3>王赫野-不知返</h3>
+                </div>
+                <div>
+                    <p>
+                        恍然又見你 清風小院燈兩盞<br>
+                        夢醒時分誰又輕嘆 苦短<br>
+                        眼前未見你 滄海無蹤更輾轉<br>
+                        止於行 空餘念 無常難參<br>
+                        <br>
+                        享一汪苦水 甘願沉沒不知返<br>
+                        水中月 似誰心 如誰意 怎斷<br>
+                        長夜太寂寥 有你方可渡彼岸<br>
+                        無所求 唯你 共伴<br>
+                        <br>
+                        斬斷囚籠 隻身尋 一場夢<br>
+                        轉動星辰 願溯洄 初相逢<br>
+                        縱使天地冰封 回憶太洶湧<br>
+                        滿目的紅 蒼茫之中相擁<br>
+                        <br>
+                        望海天盡頭 一切終歸於寂然<br>
+                        喜與樂 似幻覺 如朝露 飄散<br>
+                        孤立於世間 遙想昨日 何為盼<br>
+                        無所貪 只求 無憾<br>
+                        <br>
+                        斬斷囚籠 隻身尋 一場夢<br>
+                        轉動星辰 願溯洄 初相逢<br>
+                        縱使天地冰封 回憶太洶湧<br>
+                        滿目的紅 蒼茫之中相擁<br>
+                        <br>
+                        世間事 幻作塵埃一粟 離合最匆匆<br>
+                        夙命哪怕難違 偏要與共<br>
+                        <br>
+                        無懼碎裂 化天邊 一縷風<br>
+                        捧起誓言 紛飛中 再重逢<br>
+                        仍有萬物同在 融一片星空<br>
+                        踏願歸來 遨遊碧海蒼穹<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // 先宣告
+            const btn1 = $('#songBtn1');
+            const btn2 = $('#songBtn2');
+            const btn3 = $('#songBtn3');
+            const btn4 = $('#songBtn4');
+            // const bg = $('#bg01');
+
+            const song1 = $('#song1');
+            const song2 = $('#song2');
+            const song3 = $('#song3');
+            const song4 = $('#song4');
+            const bg01 = $('#bg01');
+
+            const songBtn = $('.songBtn');
+
+            // 確認連線
+            console.log('btn1 ok', btn1);
+            console.log('btn2 ok', btn2);
+            console.log('btn3 ok', btn3);
+            console.log('btn4 ok', btn4);
+
+            song1.hide();
+            song2.hide();
+            song3.hide();
+            song4.hide();
+
+            // action
+            songBtn.click(function (e) {
+                // 先宣告
+                let songBtn = $(this);
+
+                // 確認連線
+                console.log('this', this);
+                console.log('$(this)', $(this));
+                console.log('songbtn ok');
+
+
+                // action
+                bg01.hide();
+                song1.hide();
+                song2.hide();
+                song3.hide();
+                song4.hide();
+
+                if (songBtn.is(btn1)) {
+                    song1.show();
+                } else if (songBtn.is(btn2)) {
+                    song2.show();
+                } else if (songBtn.is(btn3)) {
+                    song3.show();
+                } else if (songBtn.is(btn4)) {
+                    song4.show();
+                }
+
+
+            });
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

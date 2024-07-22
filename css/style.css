@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(95, 158, 160);
+    bg
+}
+
+.container1,
+.container2,
+.container3{
+    height: 60vh;
+}
+
+.container4{
+    height: 60vh;
+}
+.navbar,
+.footer{
+    font-family: 'Impact';
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(84, 94, 139, 0.5);
+}
+.navbar-brand>img{
+    width: 200px;
+    /* height: 30px; */
+}
+.tabs{
+    flex-direction: row;
+}
+td{
+    font-family: 'Verdana';
+}
+.movie_text{
+font-size: 25px;
+font-family: 'cwTeXYen';
+font-weight: bold;
+font-style: italic;
+color:rgb(54, 35, 223);
+}
+
+.list-inline{
+    flex-basis: 100%;
+}
+.list-inline>img{
+    flex-basis: 80%;
+}
+.list-inline>t{
+    flex-basis: 50%;
+    color: rgb(117, 53, 189);
+    /* font-family: 'Microsoft JhengHei';
+    font-family: 'KaiTi'; */
+    font-size: 40px;
+    font-family:'cwTeXYen';
+    font-weight: bolder;
+}
+/* .table-transparent{
+    background-color: rgba(255, 255, 255, 0.1);!important
+} */
