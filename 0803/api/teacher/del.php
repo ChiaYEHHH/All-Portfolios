@@ -1,7 +1,7 @@
 <?php 
 include "../base.php";
 
-$id=$_GET['id'];
+$id=$_POST['id'];
 // dd($data);
 
 echo $Teachers->del($id);

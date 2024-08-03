@@ -4,11 +4,11 @@
 // 2.新增資料
 
 // 1.資料清洗
-include "./base.php";
-$data = $_GET;
-$students = new DB('students');
+include "../base.php";
+$data = $_POST;
 
-$Students->rollbackFun();
+
+echo $Student->rollbackFun();
 
 
 

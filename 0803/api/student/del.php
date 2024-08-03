@@ -1,13 +1,11 @@
 <?php 
-    include "./0731/api/base.php";
-    $data = $_GET;
+    include "../base.php";
+    
    
-    $id = $_GET['id'];
-    dd($data);
-    dd($id);
-       
+    $id = $_POST['id'];
+    
 
-    // $students->del($id);
+    echo $Student->del($id);
     
     // echo json_encode($result);
     

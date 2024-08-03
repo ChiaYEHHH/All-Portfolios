@@ -37,8 +37,10 @@
         ?>
     </div>
     <div class="container-fluid animate" id="myModal">
-        
         <?php include "./modal/{$do}Add.php"; ?>
+    </div>
+    <div class="container-fluid animate" id="myEditModal">
+        <?php include "./modal/{$do}Edit.php"; ?>
     </div>
 
 </body>

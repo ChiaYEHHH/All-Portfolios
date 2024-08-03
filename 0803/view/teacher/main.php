@@ -24,7 +24,7 @@
                     <td><?= $value['id']; ?></td>
                     <td><?= $value['name']; ?></td>
                     <td><?= $value['mobile']; ?></td>
-                    <td class="text-center">
+                    <td class="clearfix text-center">
                         <button class="btn btn-warning" id="editBtn" onclick="op(<?= $value['id'] ?>)">Edit</button>
                         <button class="btn btn-danger" id="delBtn" onclick="del(<?= $value['id'] ?>)">Del</button>
                     </td>

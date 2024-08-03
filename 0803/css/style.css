@@ -21,20 +21,6 @@
      border-bottom: 3px double lightpink;
  }
 
-
- /* modal */
- #opBtn {
-     /* background-color: #04AA6D; */
-     /* color: white; */
-     /* padding: 14px 20px; */
-     margin: 8px 0;
-     border: none;
-     cursor: pointer;
-     /* width: 100%; */
-     opacity: 0.9;
- }
-
-
  /* Clear floats */
  .clearfix::after {
      content: "";
@@ -45,8 +31,7 @@
 
  /* #modal, */
  #myModal,
- #modalAdd,
- #modalEdit {
+ #myEditModal{
      display: none;
      justify-content: center;
      align-items: center;

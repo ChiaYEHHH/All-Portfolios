@@ -2,11 +2,19 @@
 // add modal
 function openAddForm() {
     $("#myModal").css("display", "flex");
-
 }
 
 function closeAddForm() {
     $("#myModal").css("display", "none");
+}
+
+// Edit modal
+function openEditForm() {
+    $("#myEditModal").css("display", "flex");
+}
+
+function closeEditForm() {
+    $("#myEditModal").css("display", "none");
 }
 
 
