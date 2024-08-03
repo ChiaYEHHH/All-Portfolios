@@ -115,5 +115,5 @@ function dd($array)
     echo "</pre>";
 }
 
-$Teachers = new DB2('teachers');
-$Students = new DB2('students');
+$Teacher = new DB2('teachers');
+$Student = new DB2('students');

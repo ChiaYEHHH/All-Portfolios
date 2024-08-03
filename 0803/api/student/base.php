@@ -1,6 +1,6 @@
 <?php
 
-class DB2
+class DB
 {
     protected $table;
     protected $dsn = "mysql:host=localhost;charset=utf8;dbname=class_kai";
@@ -15,7 +15,7 @@ class DB2
 
     public function all()
     {
-        $sql = "SELECT * FROM $this->table";
+        $sql = "SELECT * FROM students";
         $data =  $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         // dd($data);
         return $data;
@@ -40,26 +40,25 @@ class DB2
     {
         $sql = "
         INSERT INTO
-            `$this->table` (`id`, `name`, `mobile`)
+            `students` (`id`, `name`, `mobile`)
         VALUES
             (NULL, '{$data['name']}', '{$data['mobile']}');
         ";
         // dd($sql);
 
-        return $this->pdo->exec($sql);
+        $this->pdo->exec($sql);
     }
-    
     public function update($data)
     {
         $id = $data['id'];
 
         $sql = "UPDATE
-                    `$this->table`
+                    `students`
                 SET
                     `name` = '{$data['name']}',
                     `mobile` = '{$data['mobile']}'
                 WHERE
-                    `$this->table`.`id` = $id;
+                    `students`.`id` = $id;
                 ";
 
         // dd($sql);
@@ -67,18 +66,11 @@ class DB2
         $this->pdo->exec($sql);
     }
 
-    public function find($id)
-    {
-        $data = "SELECT * FROM $this->table WHERE `id` = $id";
-        return $data;
-    }
-    
     // del
     public function del($id)
     {
-        $sql = "DELETE FROM $this->table WHERE `$this->table`.`id` = $id";
-        $data = $this->pdo->exec($sql);
-        return $data;
+        $sql = "DELETE FROM students WHERE `students`.`id` = $id";
+        $this->pdo->exec($sql);
     }
 
     public function rollbackFun()
@@ -86,34 +78,19 @@ class DB2
         $sql = "TRUNCATE TABLE `class_kai`.`$this->table`";
         $this->pdo->query($sql);
 
-        $sql = "INSERT INTO `$this->table` (`id`, `name`, `mobile`) VALUES
-                                        (1, '東東', '0911-111-111'),
-                                        (2, '西西', '0922-222-222'),
-                                        (3, '中中', '0933-333-333'),
-                                        (4, '南南', '0944-444-444'),
-                                        (5, '北北', '0955-555-555');
-                ";
+        $sql = "INSERT INTO
+                    `$this->table` (`id`, `name`, `mobile`)
+                VALUES
+                    (NULL, 'amy', '0911-111-111'),
+                    (NULL, 'bob', '0922-222-222'),
+                    (NULL, 'cat', '0933-333-333'),
+                    (NULL, 'dog', '0944-444-444');";
         $data = $this->pdo->exec($sql);
 
-        return $data;
         // dd($data);
 
-
+        header('Location: reload()');
         exit();
     }
 }
-
-function to($url)
-{
-    header("location:" . $url);
-}
-
-function dd($array)
-{
-    echo "<pre>";
-    print_r($array);
-    echo "</pre>";
-}
-
-$Teachers = new DB2('teachers');
-$Students = new DB2('students');
+$Students = new DB('students');

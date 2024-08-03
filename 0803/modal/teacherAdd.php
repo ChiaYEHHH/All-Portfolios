@@ -12,7 +12,7 @@
         <div class="mt-3">
             <div class="clearfix d-grid gap-2">
                 <button class="btn btn-primary" onclick="add()" type="button">add</button>
-                <button class="btn btn-primary" onclick="cl('#modal')" type="button">close</button>
+                <button class="btn btn-primary" onclick="closeAddForm()" type="button">close</button>
             </div>
 
         </div>

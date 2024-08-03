@@ -1,12 +1,16 @@
 <?php
 include "./base.php";
+
+$data = $_GET;
+ return   dd($data);
+
 class ListController
 {
 
     public function store()
     {
         $data = $_GET;
-        dd($data);
+        return dd($data);
     }
     public function update()
     {

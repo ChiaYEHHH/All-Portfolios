@@ -6,12 +6,13 @@ window.onclick = function(event) {
 }
 
 // add modal
-function openForm() {
-    document.getElementById("modalAdd").style.display = "block";
+function openAddForm() {
+    $("#modalAdd").css("display", "block");
+
 }
 
-function closeForm() {
-    document.getElementById("modalAdd").style.display = "none";
+function closeAddForm() {
+    $("#modalAdd").css("display", "none");
 }
 
 // edit modal
@@ -25,8 +26,18 @@ function closeEditForm() {
     document.getElementById("modalEdit").style.display = "none";
 }
 
-function op(id)
+function op(x,y,url)
 {
-    document.getElementById("modalEdit").style.display = "block";
-    document.getElementById("modalEdit").
+	$(x).fadeIn()
+
+	if(y)
+	$(y).fadeIn()
+
+	if(y&&url)
+	$(y).load(url)
+}
+
+function cl(x)
+{
+	$(x).fadeOut();
 }

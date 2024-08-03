@@ -1,72 +1,42 @@
-<form action="../../api/student/store.php" method="get" id="myForm" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-12 mt-3">
-                    <label for="">name</label>
-                    <input type="text" class="form-control" name="name" id="">
-                </div>
-                <div class="col-12 mt-3">
-                    <label for="">mobile</label>
-                    <input type="text" class="form-control" name="mobile" id="">
-                </div>
-                <div class="col-12 mt-3">
-                    <input type="hidden" class="form-control" name="address" id="" value="taipei input">
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="submit">Button</button>
-                    </div>
-                </div>
+<form id="myForm" enctype="multipart/form-data">
+    <h1>新增學生資料</h1>
+    <div class="row">
+        <div class="mt-3">
+            <label for="name">name</label>
+            <input type="text" class="form-control" name="name" id="name">
+        </div>
+        <div class="mt-3">
+            <label for="mobile">mobile</label>
+            <input type="text" class="form-control" name="mobile" id="mobile" required>
+        </div>
+        <div class="mt-3">
+            <div class="clearfix d-grid gap-2">
+                <button class="btn btn-primary" onclick="add()" type="button">add</button>
+                <button class="btn btn-primary" onclick="cl('#modal')" type="button">close</button>
             </div>
-        </form>
-    <!-- js or jqery -->
-    <script>
-        $(document).ready(function() {
-            // bind
-            const myForm = $('#myForm');
-            console.log('myForm', myForm);
 
-            // action
-            myForm.submit(function(e) {
-                e.preventDefault();
-                console.log('submit ok');
+        </div>
+    </div>
+</form>
+<script>
+    function add() {
+        event.preventDefault(); // 阻止表單默認提交
+        console.log('name: ',$('#name').val());
+        // $.get("./api/controller.php", {
+        //     action:'store',
+        //     name: $('#name').val(),
+        //     mobile: $('#mobile').val()
+        // }, (res) => {
 
-                // let data = $(this).serialize();
-                let data = $(this).serializeArray();
-                // console.log('data', data);
-                // console.log('typeof(data)', typeof(data));
-
-                // 方法一 xxx
-                let tmpObj = {
-                    'name': 'address',
-                    'mobile': 'taipei'
-                };
-                data.push(tmpObj);
-                // console.log(data);;
-
-                // 方法二
-                // html form hidden
-                console.log('data', data);
-
-                // ajax
-                url = "../../api/student/store.php";
-                $.ajax({
-                    type: "get",
-                    url: url,
-                    data: data,
-                    dataType: "json",
-                    success: function(res) {
-                        console.log('res', res);
-                        let result = res.msg;
-                        if (result = "ok") {
-                            console.log('ajax insert ok');
-                            header("location:../view/index.php");
-                        }
-                    }
-                });
-                // ajax end
-
-            });
-
-
-
-        });
-        // jquery end
-    </script>
+            // console.log(res);
+            
+            // if (chk) {
+            //     alert("新增成功");
+            //     location.reload();
+            // } else {
+            //     alert("新增失敗");
+            //     location.reload();
+            // }
+        // })
+    }
+</script>

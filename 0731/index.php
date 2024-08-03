@@ -31,42 +31,60 @@
                 <?php include "./view/teacher/main.php"; ?>
             </div>
             <div class="tab-pane fade w-100" id="student-tab-pane" role="tabpanel" aria-labelledby="student-tab" tabindex="0">
-                <div class="row" id="modal">
 
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="text-end">
+                            <button class="btn btn-danger" id="rollBtn">rollback</button>
+                            <button class="btn btn-success" id="opBtn" onclick="op('#modal','#myModal','./modal/student.php')">Add</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table class="table table-hover">
+                            <thead>
+                                <th width="20%">id</th>
+                                <th width="30%">name</th>
+                                <th width="30%">mobile</th>
+                                <th width="20%"></th>
+                            </thead>
+
+                            <?php
+                            $student = $Students->all();
+                            foreach ($student as $key => $value) :
+                            ?>
+                                <tr>
+                                    <td><?= $value['id']; ?></td>
+                                    <td><?= $value['name']; ?></td>
+                                    <td><?= $value['mobile']; ?></td>
+                                    <td class="text-center">
+                                        <button class="btn btn-warning" id="editBtn" onclick="openEditForm(<?= $value['id'] ?>)">Edit</button>
+                                        <button class="btn btn-danger" id="delBtn" onclick="del(<?= $value['id'] ?>)">Del</button>
+                                    </td>
+                                </tr>
+
+                            <?php endforeach; ?>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="modal">
+                    <div id="myModal" class="animate">
+                    </div>
                 </div>
             </div>
         </div>
         <!-- nav end -->
     </div>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row" id="modal">
 
         </div>
-    </div>
+    </div> -->
     <script>
-        function getStudents() {
-            $.get("./view/student/main.php", {
+        $(document).ready(function() {
+            const myTbody = $('#myTbody');
 
-            }, function(student) {
-                let studentList = '';
-                student.forEach((student) => {
-                    studentList += `
-                    <tr>
-                        <td><?= $value['id']; ?></td>
-                        <td><?= $value['name']; ?></td>
-                        <td><?= $value['mobile']; ?></td>
-                        <td class="text-center">
-                            <button class="btn btn-warning" id="editBtn" onclick="openEditForm(<?= $value['id'] ?>)">Edit</button>
-                            <button class="btn btn-danger" id="delBtn" onclick="del(<?= $value['id'] ?>)">Del</button>
-                        </td>
-                    </tr>
-                `
-                })
-
-                $("#student-tab-pane").html(studentList);
-
-            });
-        }
+        })
     </script>
 </body>
 

@@ -4,9 +4,10 @@
  }
 
  body {
+    clear: both;
      /* The image used */
      background-image: url("./img/bg2.jpg");
-     /* height: 100vh; */
+     height: 100vh;
      width: 100%;
      /* Center and scale the image nicely */
      background-position: center;
@@ -14,6 +15,10 @@
      background-size: cover;
      z-index: -1;
      margin: auto;
+ }
+
+ nav {
+     border-bottom: 3px double lightpink;
  }
 
 
@@ -29,11 +34,6 @@
      opacity: 0.9;
  }
 
- /* Extra styles for the cancel button */
- .cancelbtn {
-     padding: 14px 20px;
-     background-color: #f44336;
- }
 
  /* Clear floats */
  .clearfix::after {
@@ -47,25 +47,35 @@
  #myModal,
  #modalAdd,
  #modalEdit {
-     background-color: rgb(228, 205, 205);
      display: none;
+     justify-content: center;
+     align-items: center;
      /* Hidden by default */
      position: fixed;
      /* Stay in place */
-     top: 25%;
-     left: 35%;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     /* 背景遮罩 */
      z-index: 10;
      /* Sit on top */
-     box-shadow: 0 20px 20px rgba(100, 76, 76, 0.74);
-     padding: 60px;
  }
 
  /* Modal Content/Box */
  /* #myModal, */
  #myForm,
  #myEditForm {
+     background-color: rgb(228, 205, 205);
+     box-shadow: 0 20px 20px rgba(100, 76, 76, 0.74);
+     border-radius: 8px;
+     /* max-width: 90%; */
+     /* 適應較小的螢幕 */
+     /* max-height: 90%;/ */
      margin: auto;
-     width: 80%;
+     width: 500px;
+     padding: 60px;
  }
 
  /* Add Zoom Animation */
@@ -94,14 +104,9 @@
      }
  }
 
- /* Change styles for span and cancel button on extra small screens */
- /* @media screen and (max-width: 300px) {
-     span.psw {
-         display: block;
-         float: none;
-     }
-
-     .cancelbtn {
-         width: 100%;
+ /* @media (min-width: 768px) {
+     #myModal {
+         max-width: 400px;
+         較小螢幕時，固定最大寬度/
      }
  } */
