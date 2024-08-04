@@ -64,12 +64,13 @@ class DB2
 
         // dd($sql);
 
-        $this->pdo->exec($sql);
+        return $this->pdo->exec($sql);
     }
 
     public function find($id)
     {
-        $data = "SELECT * FROM $this->table WHERE `id` = $id";
+        $sql = "SELECT * FROM $this->table WHERE `id` = $id";
+        $data =  $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
         return $data;
     }
     
@@ -88,10 +89,10 @@ class DB2
 
         $sql = "INSERT INTO `$this->table` (`id`, `name`, `mobile`) VALUES
                                         (1, '依依', '0911111111'),
-(2, '爾爾', '0922222222'),
-(3, '姍姍', '0933333333'),
-(4, '詩詩', '0944444444'),
-(5, '伍伍', '0955555555');
+                                        (2, '爾爾', '0922222222'),
+                                        (3, '姍姍', '0933333333'),
+                                        (4, '詩詩', '0944444444'),
+                                        (5, '伍伍', '0955555555');
                 ";
         $data = $this->pdo->exec($sql);
 

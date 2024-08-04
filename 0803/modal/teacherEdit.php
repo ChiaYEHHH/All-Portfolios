@@ -27,36 +27,36 @@
     </nav>
     <div class="container mt-5 justify-content-center">
         <?php
-        include "../view/student/main.php";
+        include "../view/teacher/main.php";
         ?>
     </div>
 
     <div class="container-fluid animate d-flex" id="myEditModal">
         <form id="myEditForm" enctype="multipart/form-data">
-            <h1>修改學生資料</h1>
+            <h1>修改老師資料</h1>
             <?php
             $id = $_GET['id'];
             // echo dd($_GET);
-            $student = $Student->find($id);
-            // echo dd($student);
+            $teacher = $Teacher->find($id);
+            // echo dd($teacher);
             ?>
             <div class="row">
                 <div class="mt-3">
                     <label for="id">id</label>
-                    <input type="text" class="form-control" name="id" id="id" value="<?= $student['id']; ?>">
+                    <input type="text" class="form-control" name="id" id="id" value="<?= $teacher['id']; ?>">
                 </div>
                 <div class="mt-3">
                     <label for="name">name</label>
-                    <input type="text" class="form-control" name="name" id="name" value="<?= $student['name']; ?>">
+                    <input type="text" class="form-control" name="name" id="name" value="<?= $teacher['name']; ?>">
                 </div>
                 <div class="mt-3">
                     <label for="mobile">mobile</label>
-                    <input type="text" class="form-control" name="mobile" id="mobile" value="<?= $student['mobile']; ?>" required>
+                    <input type="text" class="form-control" name="mobile" id="mobile" value="<?= $teacher['mobile']; ?>" required>
                 </div>
                 <div class="mt-3">
                     <div class="clearfix d-grid gap-2">
                         <button class="btn btn-primary" onclick="edit()" type="button">edit</button>
-                        <a class="btn btn-primary" href="../?do=student">close</a>
+                        <a class="btn btn-primary" href="../?do=teacher">close</a>
                     </div>
 
                 </div>
@@ -72,7 +72,7 @@
     function edit() {
         $.post("../api/controller.php", {
             action: 'store',
-            table: 'student',
+            table: 'teacher',
             id: $('#id').val(),
             name: $('#name').val(),
             mobile: $('#mobile').val()

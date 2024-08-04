@@ -1,50 +1,43 @@
 <div class="row">
-    <h2 class="text-center">Teachers List~</h2>
     <div class="text-end">
+        <h2 class="text-center">Teachers List~</h2>
         <button class="btn btn-danger" id="rollBtn">rollback</button>
-        <button class="btn btn-success" id="opBtn" onclick="openForm()">Add</button>
+        <button class="btn btn-success" onclick="openAddForm()">add</button>
     </div>
 </div>
-<div class="row">
-    <table class="table table-bordered mt-3 text-center">
-        <thead>
+<table class="table table-bordered mt-3 text-center">
+    <thead>
+        <tr>
+            <th width="10%">id</th>
+            <th width="20%">name</th>
+            <th width="20%">mobile</th>
+            <th width="10%"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $teacher = $Teacher->all();
+        foreach ($teacher as $key => $value) :
+        ?>
             <tr>
-                <th width="20%">id</th>
-                <th width="30%">name</th>
-                <th width="30%">mobile</th>
-                <th width="20%"></th>
+                <td><?= $value['id']; ?></td>
+                <td><?= $value['name']; ?></td>
+                <td><?= $value['mobile']; ?></td>
+                <td class="text-center">
+                    <a class="btn btn-warning" href="./modal/teacherEdit.php?id=<?= $value['id'] ?>">Edit</a>
+                    <button class="btn btn-danger" id="delBtn" onclick="del(<?= $value['id'] ?>)">Del</button>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            <?php
-            $teacher = $Teachers->all();
-            foreach ($teacher as $key => $value) :
-            ?>
-                <tr>
-                    <td><?= $value['id']; ?></td>
-                    <td><?= $value['name']; ?></td>
-                    <td><?= $value['mobile']; ?></td>
-                    <td class="clearfix text-center">
-                        <button class="btn btn-warning" id="editBtn" onclick="op(<?= $value['id'] ?>)">Edit</button>
-                        <button class="btn btn-danger" id="delBtn" onclick="del(<?= $value['id'] ?>)">Del</button>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
-<div class="container w-25" id="modalAdd">
-    <?php include "./modal/teacher.php"; ?>
-</div>
-<div class="container w-25" id="modalEdit">
-    
-</div>
+        <?php endforeach; ?>
+    </tbody>
+</table>
 <script>
     $(document).ready(function() {
         const $rollBtn = $("#rollBtn");
         const $delBtn = $("#delBtn");
         $rollBtn.click(function() {
-            $.get("./api/teacher/rollback.php",
+            $.post("./api/teacher/rollback.php",
                 function(res) {
                     if (res != 0) {
                         console.log("res: ", res);
@@ -59,7 +52,7 @@
     })
 
     function del(id) {
-        $.get("./api/teacher/del.php", {
+        $.post("./api/teacher/del.php", {
             id
         }, (res) => {
             if (res == 1) {

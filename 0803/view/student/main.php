@@ -25,7 +25,7 @@
                 <td><?= $value['name']; ?></td>
                 <td><?= $value['mobile']; ?></td>
                 <td class="text-center">
-                    <button class="btn btn-warning" onclick="openEditForm()">Edit</button>
+                    <a class="btn btn-warning" href="./modal/studentEdit.php?id=<?= $value['id'] ?>">Edit</a>
                     <button class="btn btn-danger" id="delBtn" onclick="del(<?= $value['id'] ?>)">Del</button>
                 </td>
             </tr>

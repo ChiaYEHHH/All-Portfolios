@@ -9,7 +9,7 @@ include "../base.php";
 
 // dd($data);
 
-echo $Teachers->rollbackFun();
+echo $Teacher->rollbackFun();
 
 
 

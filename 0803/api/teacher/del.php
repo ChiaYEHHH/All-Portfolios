@@ -4,7 +4,7 @@ include "../base.php";
 $id=$_POST['id'];
 // dd($data);
 
-echo $Teachers->del($id);
+echo $Teacher->del($id);
 
 
 
