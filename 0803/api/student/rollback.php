@@ -8,7 +8,7 @@ include "../base.php";
 $data = $_POST;
 
 
-echo $Student->rollbackFun();
+echo $Student->studentRollbackFun();
 
 
 

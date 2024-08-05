@@ -4,7 +4,7 @@
  }
 
  body {
-    clear: both;
+     clear: both;
      /* The image used */
      background-image: url("./img/bg2.jpg");
      height: 100vh;
@@ -21,6 +21,10 @@
      border-bottom: 3px double lightpink;
  }
 
+ .nav-link{
+    font-size: x-large;
+ }
+
  /* Clear floats */
  .clearfix::after {
      content: "";
@@ -31,7 +35,7 @@
 
  /* #modal, */
  #myModal,
- #myEditModal{
+ #myEditModal {
      display: none;
      justify-content: center;
      align-items: center;

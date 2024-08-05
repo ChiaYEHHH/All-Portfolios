@@ -82,7 +82,7 @@ class DB2
         return $data;
     }
 
-    public function rollbackFun()
+    public function studentRollbackFun()
     {
         $sql = "TRUNCATE TABLE `class_kai`.`$this->table`";
         $this->pdo->query($sql);
@@ -102,11 +102,31 @@ class DB2
 
         exit();
     }
+    public function teacherRollbackFun()
+    {
+        $sql = "TRUNCATE TABLE `class_kai`.`$this->table`";
+        $this->pdo->query($sql);
+
+        $sql = "INSERT INTO `$this->table` (`id`, `name`, `mobile`) VALUES
+                                        (1, '東東', '0911-111-111'),
+                                        (2, '西西', '0922-222-222'),
+                                        (3, '中中', '0933-333-333'),
+                                        (4, '南南', '0944-444-444'),
+                                        (5, '北北', '0955-555-555');
+                ";
+        $data = $this->pdo->exec($sql);
+
+        return $data;
+        // dd($data);
+
+
+        exit();
+    }
 }
 
 function to($url)
 {
-    header("location:" . $url);
+    header("location:{$url}");
 }
 
 function dd($array)

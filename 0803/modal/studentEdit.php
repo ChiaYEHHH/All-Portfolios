@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../css/js.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>學生資料編輯</title>
 
 </head>
 
@@ -77,12 +77,12 @@
             name: $('#name').val(),
             mobile: $('#mobile').val()
         }, (chk) => {
-            
+
             // console.log(chk);
 
             if (chk) {
                 alert("編輯成功");
-                to(".../0803/");
+                location.href = "../?do=student";
             } else {
                 alert("新增失敗");
                 location.reload();
