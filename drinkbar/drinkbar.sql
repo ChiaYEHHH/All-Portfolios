@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-08 20:00:33
+-- 產生時間： 2024-08-06 10:04:21
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -24,15 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `bar_creative`
+-- 資料表結構 `bar_creatives`
 --
 
-CREATE TABLE `bar_creative` (
+CREATE TABLE `bar_creatives` (
   `id` int(10) NOT NULL,
   `drinksname` text NOT NULL,
   `details` text NOT NULL,
-  `contributor` text NOT NULL
+  `contributor` text NOT NULL,
+  `mobile` text NOT NULL,
+  `updated` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `bar_creatives`
+--
+
+INSERT INTO `bar_creatives` (`id`, `drinksname`, `details`, `contributor`, `mobile`, `updated`) VALUES
+(1, '優質美研', '美研社+無糖優酪乳', 'Chia', '0988888888', '2024-07-29');
 
 -- --------------------------------------------------------
 
@@ -45,6 +54,17 @@ CREATE TABLE `bar_logos` (
   `img` text NOT NULL,
   `sh` int(1) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `bar_logos`
+--
+
+INSERT INTO `bar_logos` (`id`, `img`, `sh`) VALUES
+(1, 'logo07.png', 1),
+(2, 'logo08.png', 0),
+(3, 'logo09.png', 0),
+(4, 'logo06.png', 0),
+(5, 'logo03.png', 0);
 
 -- --------------------------------------------------------
 
@@ -81,19 +101,21 @@ CREATE TABLE `bar_orders` (
   `id` int(10) NOT NULL,
   `pickuptime` date NOT NULL,
   `variety` text NOT NULL,
-  `price` int(10) NOT NULL
+  `price` int(10) NOT NULL,
+  `name` text NOT NULL,
+  `mobile` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `bar_orders`
 --
 
-INSERT INTO `bar_orders` (`id`, `pickuptime`, `variety`, `price`) VALUES
-(1, '2024-08-08', '翻糖蛋糕', 1500),
-(2, '2024-08-10', '果汁10杯、咖啡15杯', 2500),
-(3, '2024-07-31', '乳酪蛋糕', 1600),
-(4, '2024-08-30', '手工餅乾50份', 2400),
-(5, '2024-10-10', '杯子蛋糕10個', 800);
+INSERT INTO `bar_orders` (`id`, `pickuptime`, `variety`, `price`, `name`, `mobile`) VALUES
+(1, '2024-08-08', '翻糖蛋糕', 1500, '', ''),
+(2, '2024-08-10', '果汁10杯、咖啡15杯', 2500, '', ''),
+(3, '2024-07-31', '乳酪蛋糕', 1600, '', ''),
+(4, '2024-08-30', '手工餅乾50份', 2400, '', ''),
+(5, '2024-10-10', '杯子蛋糕10個', 800, '', '');
 
 -- --------------------------------------------------------
 
@@ -121,7 +143,14 @@ INSERT INTO `bar_sales` (`id`, `title`, `pic`, `price`, `variety`, `sh`) VALUES
 (4, '梨檸莓', 'drink4.jpg', 90, 'drink', 1),
 (5, '啵啵澄棒', 'drink5.jpg', 80, 'drink', 1),
 (6, '檸有冰', 'drink6.jpg', 250, 'drink', 1),
-(7, '紗冰', 'drink7.jpg', 87, 'drink', 1);
+(7, '紗冰', 'drink7.jpg', 87, 'drink', 1),
+(8, '布朗尼杯杯', 'cupcake01.jpg', 120, 'cake', 1),
+(9, '焦蕉杯杯', 'cupcake02.jpg', 130, 'cake', 1),
+(10, '抹茶杯杯', 'cupcake03.jpg', 115, 'cake', 1),
+(11, '藍盆友', 'pancake01.jpg', 150, 'cake', 1),
+(12, '蛙蛙圈套', 'donus01.jpg', 99, 'cake', 1),
+(13, '莓夢橙真', 'drink8.jpg', 120, 'drink', 1),
+(14, '藍還紫', 'cupcake04.jpg', 110, 'cake', 1);
 
 -- --------------------------------------------------------
 
@@ -133,29 +162,39 @@ CREATE TABLE `bar_staffs` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
   `mobile` text NOT NULL,
-  `ability` text NOT NULL
+  `ability` text NOT NULL,
+  `acc` text NOT NULL,
+  `pw` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `bar_staffs`
 --
 
-INSERT INTO `bar_staffs` (`id`, `name`, `mobile`, `ability`) VALUES
-(1, 'Lunna', '0920202020', '杯子蛋糕、咖啡拉花'),
-(2, 'Paul', '0933333333', '乳酪蛋糕、研磨咖啡'),
-(3, 'Fiona', '0978547854', '綜合果汁、水果冰沙'),
-(4, 'Rick', '0905050505', '研發飲品、咖啡拉花'),
-(5, 'Grace', '0998798798', '手工餅乾、杯子蛋糕、翻糖蛋糕');
+INSERT INTO `bar_staffs` (`id`, `name`, `mobile`, `ability`, `acc`, `pw`) VALUES
+(1, 'Boss', '0988888888', '賺錢、發薪水', 'admin', '1234'),
+(2, 'Lunna', '0920202020', '杯子蛋糕、咖啡拉花', 'staff01', '1111'),
+(3, 'Paul', '0933333333', '乳酪蛋糕、研磨咖啡', 'staff02', '2222'),
+(4, 'Fiona', '0978547854', '綜合果汁、水果冰沙', 'staff03', '3333'),
+(5, 'Rick', '0905050505', '研發飲品、咖啡拉花', 'staff04', '4444'),
+(6, 'Grace', '0998798798', '手工餅乾、杯子蛋糕、翻糖蛋糕', 'staff05', '5555');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `acc` text NOT NULL,
+  `pw` text NOT NULL,
+  `email` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 已傾印資料表的索引
 --
-
---
--- 資料表索引 `bar_creative`
---
-ALTER TABLE `bar_creative`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- 資料表索引 `bar_logos`
@@ -192,16 +231,10 @@ ALTER TABLE `bar_staffs`
 --
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `bar_creative`
---
-ALTER TABLE `bar_creative`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
---
 -- 使用資料表自動遞增(AUTO_INCREMENT) `bar_logos`
 --
 ALTER TABLE `bar_logos`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `bar_news`
@@ -219,7 +252,7 @@ ALTER TABLE `bar_orders`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `bar_sales`
 --
 ALTER TABLE `bar_sales`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `bar_staffs`
