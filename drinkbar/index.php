@@ -190,7 +190,7 @@
         }, (chk) => {
             if (chk == 1) {
                 alert("登入成功")
-                location.href = "admin.php";
+                location.href = "./admin.php";
             } else {
                 alert("帳號密碼錯誤");
                 location.reload();

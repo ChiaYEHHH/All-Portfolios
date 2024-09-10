@@ -21,14 +21,17 @@ if ($_SESSION['login'] != 1) {
     <!-- nav -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- logo -->
             <?php
             $logos = $Logos->all(['sh' => 1]);
             ?>
-            <a href="index.php"><img class="navbar-brand inline img-fluid" width="280px" src="./logo/<?= $logos[0]['img'] ?>" alt="" srcset=""></a>
+            <a href="index.php"><img class="navbar-brand inline img-fluid" width="280px"
+                    src="./logo/<?= $logos[0]['img'] ?>" alt="" srcset=""></a>
             <div class="collapse navbar-collapse inline" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 d-flex">
                     <li class="nav-item">
@@ -70,16 +73,13 @@ if ($_SESSION['login'] != 1) {
     <!-- content end -->
 
     <!-- footer -->
-    <footer class="navbar navbar-expand-lg mt-3">
-        <div class="container">
-            <a class="navbar-brand" href="#">DrinkBar</a>
-            <span class="navbar-item">
-                DrinkBar designer ChiaYEH
-            </span>
-            <span class="navbar-item">
-                datasource:Pinterest.com/Freepik.com/Design.com
-            </span>
-
-        </div>
-    </footer>
+    <nav class=" navbar navbar-expand-lg mt-3">
+        <a class="container navbar-brand" href="#">DrinkBar</a>
+        <span class="navbar-item">
+            DrinkBar designer ChiaYEH
+        </span>
+        <span class="navbar-item">
+            datasource:Pinterest.com/Freepik.com/Design.com
+        </span>
+    </nav>
 </body>
