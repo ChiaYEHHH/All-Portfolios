@@ -1,5 +1,5 @@
 <?php include_once "../api/base.php"; ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>老師資料編輯</title>
 
-</head>
+</head> -->
 
-<body>
+<!-- <body>
     <nav class="container-fluid mt-5" id="navbar">
         <ul class="nav justify-content-center">
             <li class="nav-item">
@@ -27,9 +27,9 @@
     </nav>
     <div class="container mt-5 justify-content-center">
         <?php
-        include "../view/teacher/main.php";
+        // include "../view/teacher/main.php";
         ?>
-    </div>
+    </div> -->
 
     <div class="container-fluid animate d-flex" id="myEditModal">
         <form id="myEditForm" enctype="multipart/form-data">
@@ -64,13 +64,13 @@
         </form>
     </div>
 
-</body>
+<!-- </body>
 
-</html>
+</html> -->
 
 <script>
     function edit() {
-        $.post("../api/controller.php", {
+        $.post("./api/controller.php", {
             action: 'store',
             table: 'teacher',
             id: $('#id').val(),

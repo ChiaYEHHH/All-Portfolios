@@ -3,13 +3,13 @@
 class DB2
 {
     protected $table;
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=class_kai";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=s1130112";
     protected $pdo;
 
 
     public function __construct($table)
     {
-        $this->pdo = new PDO($this->dsn, 'root', '');
+        $this->pdo = new PDO($this->dsn, 's1130112', 's1130112');
         $this->table = $table;
     }
 
@@ -36,7 +36,7 @@ class DB2
         return $tmp;
     }
 
-    public function store($data)
+    public function save($data)
     {
         $sql = "
         INSERT INTO
@@ -84,7 +84,7 @@ class DB2
 
     public function studentRollbackFun()
     {
-        $sql = "TRUNCATE TABLE `class_kai`.`$this->table`";
+        $sql = "TRUNCATE TABLE `s1130112`.`$this->table`";
         $this->pdo->query($sql);
 
         $sql = "INSERT INTO `$this->table` (`id`, `name`, `mobile`) VALUES
@@ -104,7 +104,7 @@ class DB2
     }
     public function teacherRollbackFun()
     {
-        $sql = "TRUNCATE TABLE `class_kai`.`$this->table`";
+        $sql = "TRUNCATE TABLE `s1130112`.`$this->table`";
         $this->pdo->query($sql);
 
         $sql = "INSERT INTO `$this->table` (`id`, `name`, `mobile`) VALUES
@@ -136,5 +136,5 @@ function dd($array)
     echo "</pre>";
 }
 
-$Teacher = new DB2('teachers');
-$Student = new DB2('students');
+$Teacher = new DB2('list_teachers');
+$Student = new DB2('list_students');

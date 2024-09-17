@@ -1,26 +1,21 @@
 <?php
 include "./base.php";
 
+$action = $_POST['action'];
+$table = ${ucfirst($_POST['table'])};
+unset($_POST['action'], $_POST['table']);
 $data = $_POST;
-$action = $data['action'];
-$table = ucfirst($data['table']);
 // echo $action.$table;
 
-// unset($data['action'], $data['table']);
 
-// return dd($data);
+// dd($data);
 
 if ($action == 'store') {
-
-    if (isset($data['id'])) {
-        echo $$table->update($data);
-    } else {
-        echo $$table->store($data);
-    }
-} elseif ($action == 'rollback') {
-    echo $$table->rollbackFun();
+    echo $table->update($data);
+} elseif ($action == 'save') {
+    echo $table->save($data);
 } elseif ($action == 'del') {
-    echo $$table->del();
+    echo $table->del($data['id']);
 }
 
 class ListController
@@ -36,11 +31,11 @@ class ListController
     // $data = $_GET;
     // dd($data);
     // }
-    public function del()
-    {
-        $data = $_GET;
-        dd($data);
-    }
+    // public function del()
+    // {
+        // $data = $_GET;
+        // dd($data);
+    // }
     // public function rollback()
     // {
     //     $data = $_GET;

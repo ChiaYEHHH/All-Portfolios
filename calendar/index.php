@@ -42,7 +42,7 @@ include_once "api.php";
                     <div class="div">
                         <a class="btn btn-info" href="index.php?year=<?= $lastYear; ?>&mon=<?= $lastMon; ?>">上個月</a>
                     </div>
-                    <div class="div">
+                    <div class="div" style="font-weight:bolder;font-size:large;color: #c94123;">
                         <?= $year; ?>年 <?= $mon; ?>月
                     </div>
                     <div class="div">
@@ -68,7 +68,7 @@ include_once "api.php";
 </body>
 
 </html>
-<scrip>
+<script>
     $(document).ready(function() {
 
         const c_Btn = $('#clock_Switch');
